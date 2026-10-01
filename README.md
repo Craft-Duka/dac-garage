@@ -110,3 +110,10 @@ lib/
 public/
   DAC Auto Garage Logo-05.png
 ```
+
+## Body shop website configuration
+
+- Enquiries are addressed to `sales@dautoclinic.com`. The enquiry form opens a populated email draft; visitors review, attach photos and send it in their own email app. No server-side email provider is configured. The legacy contact API returns HTTP 410 rather than acknowledging an undelivered message.
+- Set `NEXT_PUBLIC_SITE_URL` to the verified production origin before building. It defaults to `https://dautoclinic.com` and controls canonical URLs, structured data and the sitemap.
+- Photography is illustrative. Replace it with approved workshop and customer project photography before presenting it as completed DAC work.
+- `/shop` permanently redirects to `/services`; placeholder testimonials are excluded from indexing and the sitemap.

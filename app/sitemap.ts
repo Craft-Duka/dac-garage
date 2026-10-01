@@ -7,15 +7,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/about',
     '/services',
-    '/shop',
     '/blog',
     '/gallery',
-    '/testimonials',
     '/contact',
     '/enquiry',
   ].map((path) => ({
     url: `${SITE_URL}${path}`,
-    lastModified: new Date(),
   }))
 
   const articleRoutes = getAllArticles().map((article) => ({

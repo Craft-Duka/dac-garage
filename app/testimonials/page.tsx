@@ -8,6 +8,8 @@ import { BUSINESS } from '@/lib/constants'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/testimonials' },
+  robots: { index: false, follow: true },
   title: 'Testimonials',
   description:
     "What DAC Auto customers say about our car wash, detailing, paint & accident repair, and customisation services in Nairobi.",

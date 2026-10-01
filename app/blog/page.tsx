@@ -6,6 +6,7 @@ import { BlogPostPreview } from '@/components/BlogPostPreview'
 import { BLOG_CATEGORIES, getAllArticles } from '@/lib/blog'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/blog' },
   title: 'Learn — Car Care & Insurance Guides',
   description:
     "Practical guides on insurance claims, garage inspections, buying a used car, new-driver safety, and everyday maintenance — from DAC Auto's Nairobi technicians.",
