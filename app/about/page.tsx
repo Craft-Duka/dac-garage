@@ -19,7 +19,7 @@ export default function AboutPage() {
       <section className="wrap editorial-section craft-grid">
         <div className="craft-image">
           <Image
-            src="/our-work/image2.jpg"
+            src="/images/dac-workshop-10.jpeg"
             alt="A technician attending to a car in an automotive workshop"
             fill
             sizes="(max-width: 800px) 100vw, 50vw"

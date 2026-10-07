@@ -7,12 +7,14 @@ import {
   faqSchema,
 } from "@/lib/structured-data";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { VideoCard } from "@/components/VideoCard";
+import { GALLERY_VIDEOS } from "@/lib/videos";
 
 const photos = [
-  "/our-work/image3.jpg",
-  "/generated/img-car-paint-800x600-208.jpg",
-  "/our-work/image6.jpg",
-  "/generated/img-car-vinylwrap-800x600-206.jpg",
+  "/images/dac-workshop-01.jpeg",
+  "/images/dac-workshop-02.jpeg",
+  "/images/dac-workshop-03.jpeg",
+  "/images/dac-workshop-04.jpeg",
 ];
 
 export default function Home() {
@@ -31,7 +33,7 @@ export default function Home() {
       <section className="home-hero">
         <div className="hero-photo">
           <Image
-            src="/our-work/image3.jpg"
+            src="/images/dac-workshop-01.jpeg"
             alt="A technician carefully working on the finish of a car in a workshop"
             fill
             preload
@@ -136,7 +138,7 @@ export default function Home() {
         <div className="wrap craft-grid">
           <div className="craft-image">
             <Image
-              src="/our-work/image2.jpg"
+              src="/images/dac-workshop-05.jpeg"
               alt="Automotive technician attending to a vehicle in the workshop"
               fill
               sizes="(max-width: 760px) 100vw, 50vw"
@@ -187,6 +189,10 @@ export default function Home() {
             </Link>
           </div>
         </div>
+      </section>
+      <section className="wrap editorial-section home-video-section">
+        <div className="section-heading"><div><p className="eyebrow">04 / DAC IN MOTION</p><h2>A closer look<br /><span>at the craft.</span></h2></div><div className="section-intro"><p>Step inside the workshop and see what goes into a finish worth coming back for.</p><Link href="/gallery" className="text-link">Watch all films <span aria-hidden="true">↗</span></Link></div></div>
+        <div className="video-grid video-grid-preview">{GALLERY_VIDEOS.slice(0, 3).map((video, i) => <VideoCard key={video.playbackId} video={video} index={i} />)}</div>
       </section>
       <section className="wrap editorial-section process-section">
         <div className="section-heading">

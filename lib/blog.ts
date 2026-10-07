@@ -210,7 +210,7 @@ export const ARTICLES: Article[] = [
     readingTimeMinutes: 6,
     author: 'DAC Auto Team',
     heroImage: {
-      src: '/generated/img-car-dealership-1200x675-404.jpg',
+      src: '/images/dac-workshop-25.jpeg',
       alt: 'Newly purchased car handover at a dealership showroom',
     },
     sections: [
@@ -260,7 +260,7 @@ export const ARTICLES: Article[] = [
     readingTimeMinutes: 5,
     author: 'DAC Auto Team',
     heroImage: {
-      src: '/generated/img-driving-car-1200x675-405.jpg',
+      src: '/images/dac-workshop-26.jpeg',
       alt: 'New driver checking tyres on their car before setting off',
     },
     disclaimer:
@@ -312,7 +312,7 @@ export const ARTICLES: Article[] = [
     readingTimeMinutes: 6,
     author: 'DAC Auto Team',
     heroImage: {
-      src: '/generated/img-tire-car-1200x675-406.jpg',
+      src: '/images/dac-workshop-27.jpeg',
       alt: 'Safely changing a flat car tyre on the roadside using a jack',
     },
     disclaimer:
@@ -372,7 +372,7 @@ export const ARTICLES: Article[] = [
     readingTimeMinutes: 4,
     author: 'DAC Auto Team',
     heroImage: {
-      src: '/generated/img-engine-oil-1200x675-407.jpg',
+      src: '/images/dac-workshop-28.jpeg',
       alt: 'Checking engine oil level with a dipstick in a car engine bay',
     },
     sections: [
@@ -424,7 +424,7 @@ export const ARTICLES: Article[] = [
     readingTimeMinutes: 5,
     author: 'DAC Auto Team',
     heroImage: {
-      src: '/generated/img-brakes-car-1200x675-408.jpg',
+      src: '/images/dac-workshop-29.jpeg',
       alt: 'Mechanic measuring brake pad thickness with calipers on a lifted vehicle',
     },
     disclaimer:

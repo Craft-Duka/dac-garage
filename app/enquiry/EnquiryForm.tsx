@@ -55,26 +55,26 @@ function EnquiryFormInner() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     const service =
       SERVICES.find((item) => item.id === form.service)?.title ?? form.service;
-    const body = [
-      `Name: ${form.name}`,
-      `Email: ${form.email}`,
-      `Phone: ${form.phone}`,
-      `Vehicle: ${form.vehicleMake} ${form.vehicleModel} ${form.vehicleYear}`,
-      `Service: ${service}`,
-      `Preferred branch: ${form.preferredBranch || "No preference"}`,
-      `Preferred date: ${form.preferredDate || "To be arranged"}`,
-      "",
-      form.message,
-    ].join("\n");
-    window.location.href = `${BUSINESS.emailLink}?subject=${encodeURIComponent("Bodywork enquiry — " + (service || "Vehicle assessment"))}&body=${encodeURIComponent(body)}`;
-    setStatus("success");
-    setFeedback(
-      "Your email draft is ready to open. Send it from your email app to complete your enquiry. If no app opens, email sales@dautoclinic.com directly. You can attach damage photos before sending.",
-    );
+    setStatus("loading");
+    setFeedback("");
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ ...form, service: service || form.service }),
+      });
+      const result = await response.json();
+      if (!response.ok || !result.success) throw new Error(result.message);
+      setStatus("success");
+      setFeedback("Thanks — your enquiry has been sent. Our team will be in touch shortly.");
+    } catch {
+      setStatus("error");
+      setFeedback("We couldn’t send your enquiry right now. Please try again or contact us by email.");
+    }
   }
 
   return (
@@ -305,16 +305,15 @@ function EnquiryFormInner() {
         disabled={status === "loading"}
         className="btn btn-primary w-full"
       >
-        {status === "loading" ? "Preparing…" : "Continue in your email app ↗"}
+        {status === "loading" ? "Sending…" : "Send enquiry ↗"}
       </button>
 
       <p className="brand-body text-secondary text-xs text-center">
-        This form prepares an email to{" "}
+        Your details are sent securely to our enquiry inbox. For direct contact, email{" "}
         <a href={BUSINESS.emailLink} className="text-accent underline">
           {BUSINESS.email}
         </a>
-        . Review and send it in your email app. Your details are not submitted
-        until you send the email.
+        .
       </p>
     </form>
   );

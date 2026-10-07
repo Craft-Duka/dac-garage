@@ -26,7 +26,7 @@ export const PRODUCTS: Product[] = [
       'Full interior and exterior detail — hand wash, clay bar decontamination, interior deep clean, and wax protection.', // TEMP [COPY]
     price: null,
     image: {
-      src: '/generated/img-car-detailing-600x600-301.jpg',
+      src: '/images/dac-workshop-17.jpeg',
       alt: 'Full interior and exterior car detailing service',
     },
     fitmentNote: 'Suitable for sedans, SUVs and vans. Price varies by vehicle size.',
@@ -38,7 +38,7 @@ export const PRODUCTS: Product[] = [
     description: 'Quick exterior wash, tyre shine, and interior vacuum — done while you wait.', // TEMP [COPY]
     price: null,
     image: {
-      src: '/generated/img-carwash-600x600-302.jpg',
+      src: '/images/dac-workshop-18.jpeg',
       alt: 'Express car wash with foam and vacuum service',
     },
   },
@@ -50,7 +50,7 @@ export const PRODUCTS: Product[] = [
       'A full damage assessment with a written repair quote — ready to share with your insurer.', // TEMP [COPY]
     price: null,
     image: {
-      src: '/generated/img-car-dent-600x600-303.jpg',
+      src: '/images/dac-workshop-19.jpeg',
       alt: 'Vehicle accident damage assessment and repair quote service',
     },
   },
@@ -61,7 +61,7 @@ export const PRODUCTS: Product[] = [
     description: 'A curated range of alloy wheel sets for popular Nairobi vehicle models.', // TEMP [COPY]
     price: null,
     image: {
-      src: '/generated/img-wheel-alloy-600x600-304.jpg',
+      src: '/images/dac-workshop-20.jpeg',
       alt: 'Alloy wheel set for sale',
     },
     fitmentNote: 'Confirm bolt pattern and size for your exact model before ordering.',
@@ -73,7 +73,7 @@ export const PRODUCTS: Product[] = [
     description: 'Matte, gloss, and satin vinyl wrap colours for full or partial vehicle wraps.', // TEMP [COPY]
     price: null,
     image: {
-      src: '/generated/img-car-vinylwrap-600x600-305.jpg',
+      src: '/images/dac-workshop-21.jpeg',
       alt: 'Vinyl wrap colour range for full or partial vehicle wraps',
     },
   },
@@ -84,7 +84,7 @@ export const PRODUCTS: Product[] = [
     description: 'Quality synthetic-blend engine oil, topped up or fully changed by our technicians.', // TEMP [COPY]
     price: 1200, // TEMP [COPY]: confirm current price
     image: {
-      src: '/generated/img-motoroil-600x600-306.jpg',
+      src: '/images/dac-workshop-22.jpeg',
       alt: 'Engine oil 5W-30 synthetic blend',
     },
   },
@@ -95,7 +95,7 @@ export const PRODUCTS: Product[] = [
     description: 'OEM-spec brake pad sets, supplied and fitted by our technicians.', // TEMP [COPY]
     price: null,
     image: {
-      src: '/generated/img-brakes-car-600x600-307.jpg',
+      src: '/images/dac-workshop-23.jpeg',
       alt: 'Brake pad set for front or rear axle',
     },
     fitmentNote: 'Price depends on vehicle make and model — confirm fitment on enquiry.',
@@ -107,7 +107,7 @@ export const PRODUCTS: Product[] = [
     description: 'Replacement car batteries with free testing and fitting at either branch.', // TEMP [COPY]
     price: null,
     image: {
-      src: '/generated/img-carbattery-600x600-308.jpg',
+      src: '/images/dac-workshop-24.jpeg',
       alt: 'Car battery replacement for standard vehicle sizes',
     },
   },

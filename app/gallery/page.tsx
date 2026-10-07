@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
+import { VideoCard } from "@/components/VideoCard";
+import { GALLERY_VIDEOS } from "@/lib/videos";
 export const metadata: Metadata = {
   title: "Bodywork & Paint Gallery",
   description:
@@ -9,12 +11,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/gallery" },
 };
 const images = [
-  ["/our-work/image3.jpg", "Attention to the finish"],
-  ["/generated/img-car-paint-800x600-208.jpg", "Character in every curve"],
-  ["/our-work/image2.jpg", "Care in the workshop"],
-  ["/our-work/image6.jpg", "The finishing touch"],
-  ["/generated/img-car-vinylwrap-800x600-206.jpg", "A distinctive silhouette"],
-  ["/our-work/image1.jpg", "Where the work begins"],
+  ["/images/dac-workshop-11.jpeg", "Attention to the finish"],
+  ["/images/dac-workshop-12.jpeg", "Character in every curve"],
+  ["/images/dac-workshop-13.jpeg", "Care in the workshop"],
+  ["/images/dac-workshop-14.jpeg", "The finishing touch"],
+  ["/images/dac-workshop-15.jpeg", "A distinctive silhouette"],
+  ["/images/dac-workshop-16.jpeg", "Where the work begins"],
 ];
 export default function GalleryPage() {
   return (
@@ -51,6 +53,10 @@ export default function GalleryPage() {
           </Link>
         </div>
       </section>
+      <section className="video-gallery-section"><div className="wrap">
+        <div className="section-heading"><div><p className="eyebrow">05 / IN MOTION</p><h2>The work,<br /><span>in motion.</span></h2></div><p className="section-intro video-intro">See the people, process and precision behind the finish. Tap any film to watch it full screen.</p></div>
+        <div className="video-grid">{GALLERY_VIDEOS.map((video, i) => <VideoCard key={video.playbackId} video={video} index={i} />)}</div>
+      </div></section>
     </>
   );
 }

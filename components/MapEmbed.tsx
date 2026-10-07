@@ -6,7 +6,7 @@ interface MapEmbedProps {
 }
 
 /**
- * Google Maps embed for Mai Mahiu Rd, Langata, Nairobi.
+ * Google Maps embed for the DAC Auto Clinic location.
  * No API key required — uses the standard embed URL format.
  * TEMP: For a production deployment, replace with Google Maps Embed API (requires API key)
  *       for better performance, analytics, and customisation.
@@ -22,8 +22,8 @@ export function MapEmbed({ className = '', height = '400px' }: MapEmbedProps) {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="DAC Auto Clinic — Mai Mahiu Rd, Langata, Nairobi"
-        aria-label="Map showing DAC Auto Clinic location at Mai Mahiu Rd, Langata, Nairobi"
+        title="DAC Auto Clinic location"
+        aria-label="Map showing the DAC Auto Clinic location"
       />
     </div>
   )

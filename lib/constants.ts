@@ -19,9 +19,8 @@ export const BUSINESS = {
   address: "Mai Mahiu Rd, Langata, Mbagathi, Nairobi Area, Kenya 00100",
   locations: ["Lang'ata", "Upperhill"],
   googleMapsLink:
-    "https://maps.google.com/?q=Mai+Mahiu+Rd,Langata,Nairobi,Kenya",
-  googleMapsEmbed:
-    "https://maps.google.com/maps?q=Mai+Mahiu+Rd+Langata+Nairobi+Kenya&output=embed&iwloc=&z=15",
+    "https://maps.app.goo.gl/pw9qKxzjd6eefVzy5",
+  googleMapsEmbed: "https://maps.app.goo.gl/pw9qKxzjd6eefVzy5",
 } as const;
 
 /** Per-branch contact details — used on Contact, home Location section, and Footer. */

@@ -11,10 +11,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "/services" },
 };
 const photos = [
-  "/our-work/image3.jpg",
-  "/generated/img-car-paint-800x600-208.jpg",
-  "/our-work/image6.jpg",
-  "/generated/img-car-vinylwrap-800x600-206.jpg",
+  "/images/dac-workshop-06.jpeg",
+  "/images/dac-workshop-07.jpeg",
+  "/images/dac-workshop-08.jpeg",
+  "/images/dac-workshop-09.jpeg",
 ];
 export default function ServicesPage() {
   return (
