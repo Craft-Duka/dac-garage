@@ -13,6 +13,23 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## PostHog analytics
+
+PostHog initializes in `instrumentation-client.ts` using the `2026-08-30`
+defaults. To enable it, add these values to `.env.local` and your hosting
+provider's environment settings:
+
+```dotenv
+NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN=your_project_token
+NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
+```
+
+Use the project token from PostHog project settings and the ingestion host for
+your region (`https://eu.i.posthog.com` for EU projects) or self-hosted instance.
+Analytics stays disabled when either value is missing. Restart the development
+server after changing these values; production values must be set before building
+because Next.js embeds `NEXT_PUBLIC_` variables in the browser bundle.
+
 ---
 
 ## Pages
